@@ -1,9 +1,10 @@
-# Python
+# Python Bytecode and Compilation
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
-.Python
+
+# Build Artifacts
 build/
 develop-eggs/
 dist/
@@ -21,19 +22,19 @@ wheels/
 *.egg
 MANIFEST
 
-# Virtual Environments
+# Virtual Environments (CRITICAL)
 venv/
 env/
 ENV/
 env.bak/
 venv.bak/
-venv311/ # <-- SPECIFICALLY IGNORING YOUR VENV DIRECTORY
+venv311/ # <-- YOUR SPECIFIC VIRTUAL ENVIRONMENT DIRECTORY
 
-# Jupyter Notebook
+# Jupyter Notebook Checkpoints
 .ipynb_checkpoints
 *.ipynb_checkpoints/
 
-# IDEs
+# IDE and OS Files
 .vscode/
 .idea/
 *.swp
@@ -41,25 +42,24 @@ venv311/ # <-- SPECIFICALLY IGNORING YOUR VENV DIRECTORY
 *~
 .DS_Store
 
-# Data files (Generated/Large)
-# The output CSVs should be included in the repo for the reviewer, but 
-# model/visualization outputs should be ignored if they are large.
-# You have these covered below.
-# data/data.csv
-# data/*.pkl
+# --- Project Specific Generated Files ---
 
-# Model files (Generated/Large)
-# models/*.pkl # <-- Keeping this section commented as your model is small and required
-# models/*.h5
-# models/*.pt
+# Streamlit App Cache (Utilities)
+streamlit_app/__pycache__/ # <-- CACHE FOR YOUR MODULAR .PY FILES
 
-# --- Streamlit/Utility Files Cache ---
-streamlit_app/__pycache__/ # <-- Ignoring pycache inside your Streamlit app utilities
+# Output Directories
+visualizations/ # <-- YOUR NEW OUTPUT FOLDER FOR PLOTS (e.g., heatmap, scatter)
+tmp/
+temp/
+*.tmp
 
-# --- Output Directories ---
-visualizations/ # <-- Ignoring the directory where your plots are saved
+# Data Files (Uncomment if dataset is large - keep the small ones)
+# data/data.csv 
 
-# Environment variables
+# Model Files (Uncomment if model is large - keep small .pkl)
+# models/*.pkl 
+
+# Environment Variables
 .env
 .env.local
 
@@ -70,12 +70,3 @@ logs/
 # Cache
 .cache/
 *.cache
-
-# OS
-Thumbs.db
-.DS_Store
-
-# Temporary files
-tmp/
-temp/
-*.tmp
