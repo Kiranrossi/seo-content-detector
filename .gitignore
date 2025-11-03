@@ -27,6 +27,7 @@ env/
 ENV/
 env.bak/
 venv.bak/
+venv311/  # --> ADDED: Specifically ignore the venv folder you are using
 
 # Jupyter Notebook
 .ipynb_checkpoints
@@ -50,6 +51,14 @@ venv.bak/
 # models/*.pkl
 # models/*.h5
 # models/*.pt
+
+# --- Streamlit/Utility Files ---
+# Streamlit App utilities cache
+streamlit_app/__pycache__/  # --> ADDED: Ignore pycache inside the streamlit_app folder
+
+# --- Output Directories ---
+# Output visualizations (already in place, just ensuring consistency)
+visualizations/  # --> ADDED: Ensure the new output folder for images is ignored
 
 # Environment variables
 .env
