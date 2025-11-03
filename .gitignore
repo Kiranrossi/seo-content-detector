@@ -27,7 +27,7 @@ env/
 ENV/
 env.bak/
 venv.bak/
-venv311/  # --> ADDED: Specifically ignore the venv folder you are using
+venv311/ # <-- SPECIFICALLY IGNORING YOUR VENV DIRECTORY
 
 # Jupyter Notebook
 .ipynb_checkpoints
@@ -41,24 +41,23 @@ venv311/  # --> ADDED: Specifically ignore the venv folder you are using
 *~
 .DS_Store
 
-# Data files (if too large for GitHub)
-# Uncomment if dataset exceeds 100MB
+# Data files (Generated/Large)
+# The output CSVs should be included in the repo for the reviewer, but 
+# model/visualization outputs should be ignored if they are large.
+# You have these covered below.
 # data/data.csv
 # data/*.pkl
 
-# Model files (if too large)
-# Uncomment if model exceeds 100MB
-# models/*.pkl
+# Model files (Generated/Large)
+# models/*.pkl # <-- Keeping this section commented as your model is small and required
 # models/*.h5
 # models/*.pt
 
-# --- Streamlit/Utility Files ---
-# Streamlit App utilities cache
-streamlit_app/__pycache__/  # --> ADDED: Ignore pycache inside the streamlit_app folder
+# --- Streamlit/Utility Files Cache ---
+streamlit_app/__pycache__/ # <-- Ignoring pycache inside your Streamlit app utilities
 
 # --- Output Directories ---
-# Output visualizations (already in place, just ensuring consistency)
-visualizations/  # --> ADDED: Ensure the new output folder for images is ignored
+visualizations/ # <-- Ignoring the directory where your plots are saved
 
 # Environment variables
 .env
