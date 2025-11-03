@@ -1,0 +1,20 @@
+{
+  "model_type": "RandomForestClassifier",
+  "features": [
+    "word_count",
+    "sentence_count",
+    "flesch_reading_ease"
+  ],
+  "metrics": {
+    "accuracy": 0.8666666666666667,
+    "f1_score": 0.8755555555555556,
+    "baseline_accuracy": 0.8,
+    "improvement": 0.06666666666666665
+  },
+  "training_samples": 49,
+  "training_date": "2025-11-03",
+  "config": {
+    "thin_content_threshold": 500,
+    "similarity_threshold": 0.8
+  }
+}
